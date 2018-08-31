@@ -16,3 +16,15 @@ var displayDate = month + ' ' + day + ' ' + year;
 var dateContainer = document.getElementById('date');
 // Changes text of span to current date
 dateContainer.innerHTML = displayDate;
+
+
+
+// Target trash icons
+var trash = document.getElementsByClassName('trash');
+// Add event listener to remove current goal when trash icon is pressed
+for (var i = 0; i < trash.length; i++) {
+    trash[i].addEventListener('click', function() {
+        var par = this.parentNode.parentNode;
+        par.removeChild(this.parentNode);
+    })
+}
