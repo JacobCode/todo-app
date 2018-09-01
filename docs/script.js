@@ -20,8 +20,8 @@ function deleteGoal() {
     // Add event listener, to remove current goal when trash icon is pressed
     for (var i = 0; i < trash.length; i++) {
         trash[i].addEventListener('click', function () {
-            var par = this.parentNode.parentNode;
-            par.removeChild(this.parentNode);
+            var par = this.parentNode;
+            par.remove();
         })
     }
 }
@@ -30,9 +30,11 @@ function deleteGoal() {
 var button = document.getElementById('add');
 // Add event listener when button is clicked
 button.addEventListener('click', function() {
+    // Number of goals
+    var goalsLength = document.getElementById('goals').childElementCount;
     // Select user input value
     var userInput = document.getElementById('user-input').value;
-    if (userInput.length > 0) {
+    if (userInput.length > 0 && goalsLength < 7) {
         var span = document.createElement('span').innerHTML = userInput;
         // Goal div
         var goal = document.createElement('div');
