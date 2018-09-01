@@ -20,7 +20,7 @@ body {
 .app {
 	height: 600px;
 	width: 400px;
-	background: #9191e2;
+	background: #3778da;
 	color: white;
 }
 /* Start date design */
@@ -48,24 +48,32 @@ body {
 .app .items .new-goal .fas {
 	padding: 5px;
 	margin-right: 15px;
-	color: black;
-	border: 2px solid black;
+	color: #3778da;
+	border: 2px solid #3778da;
 	border-radius: 50%;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
 .app .items .new-goal .fas:hover {
 	color: white;
-	background: black;
+	background: #3778da;
 	border-color: transparent;
 }
 .app .items .new-goal input {
 	width: 100%;
 	outline: none;
 	border: none;
-	border-bottom: 2px solid black;
+	color: #353535;
+	border-bottom: 2px solid #f0f0f0;
 	padding-bottom: 5px;
 	font-size: 1rem;
+	transition: all 0.3s ease-in-out;
+}
+.app .items .new-goal input:focus {
+	border-color: #3778da;
+}
+.app .items .new-goal input::placeholder, input::-moz-placeholder, input::-webkit-input-placeholder {
+	color: #353535;
 }
 /* Start goal list */
 .app .items .goal-list {
@@ -82,6 +90,7 @@ body {
 }
 .app .items .goal-list .goal span {
 	margin-left: 15px;
+	color: #353535;
 }
 .app .items .goal-list .goal .trash {
 	background: #3778da;
